@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccsessLayer.Abstract
+namespace BusinessLayer.Abstract
 {
-    public interface ICustomerAccountProcessDal:IGenericDal<ICustomerAccountProcessDal>
+    internal interface ICustomerAccountService
     {
     }
 }
