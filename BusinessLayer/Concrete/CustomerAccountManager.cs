@@ -12,29 +12,35 @@ namespace BusinessLayer.Concrete
     public class CustomerAccountManager : ICustomerAccountService
     {
         private readonly ICustomerAccountDal _customerAccountDal;
+
+        public CustomerAccountManager(ICustomerAccountDal customerAccountDal)
+        {
+            _customerAccountDal = customerAccountDal;
+        }
+
         public void TDelete(CustomerAccount t)
         {
-            throw new NotImplementedException();
+            _customerAccountDal.Delete(t);
         }
 
         public CustomerAccount TGetById(int id)
         {
-            throw new NotImplementedException();
+            return _customerAccountDal.GetById(id);
         }
 
         public List<CustomerAccount> TGetList()
         {
-            throw new NotImplementedException();
+            return _customerAccountDal.GetList();
         }
 
         public void TInsert(CustomerAccount t)
         {
-            throw new NotImplementedException();
+            _customerAccountDal.Insert(t);
         }
 
         public void TUpdate(CustomerAccount t)
         {
-            throw new NotImplementedException();
+            _customerAccountDal.Update(t);
         }
     }
 }
