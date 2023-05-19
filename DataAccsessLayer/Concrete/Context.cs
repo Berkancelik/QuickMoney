@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace DataAccsessLayer.Concrete
 {
-    public class Context : IdentityDbContext
-    {
-     
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+	public class Context : IdentityDbContext<AppUser, AppRole, int>
+	{
+
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(" Data Source=DESKTOP-IITT7DV;Initial Catalog=QuickMoneyDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         }

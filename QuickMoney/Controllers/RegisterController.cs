@@ -44,7 +44,7 @@ namespace QuickMoney.Controllers
 				if (result.Succeeded)
 				{
 					MimeMessage mimeMessage = new MimeMessage();
-					MailboxAddress mailboxAddressFrom = new MailboxAddress("Easy Cash Admin", "projekursapi@gmail.com");
+					MailboxAddress mailboxAddressFrom = new MailboxAddress("Quick Money Admin", "quickmoneys100@gmail.com");
 					MailboxAddress mailboxAddressTo = new MailboxAddress("User", appUser.Email);
 
 					mimeMessage.From.Add(mailboxAddressFrom);
@@ -58,7 +58,7 @@ namespace QuickMoney.Controllers
 
 					SmtpClient client = new SmtpClient();
 					client.Connect("smtp.gmail.com", 587, false);
-					client.Authenticate("projekursapi@gmail.com", "ndqpnydjekcmyvus");
+					client.Authenticate("quickmoneys100@gmail.com", "abllyuuztwjkrtqm");
 					client.Send(mimeMessage);
 					client.Disconnect(true);
 
