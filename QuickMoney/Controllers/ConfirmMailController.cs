@@ -27,9 +27,10 @@ namespace QuickMoney.Controllers
 			var user = await _userManager.FindByEmailAsync(confirmMailViewModel.Mail);
 			if (user.ConfirmCode == confirmMailViewModel.ConfirmCode)
 			{
+				user.EmailConfirmed= true;
 				return RedirectToAction("Index", "MyProfile");
-				//email confirmed kısmı update edilip true'ya dönecek
-			}
+
+ 			}
 			return View();
 		}
 	}
