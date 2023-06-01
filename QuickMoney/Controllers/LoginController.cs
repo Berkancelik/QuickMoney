@@ -31,9 +31,9 @@ namespace QuickMoney.Controllers
                 {
                     return RedirectToAction("Index", "MyProfile");
                 }
-              
+
             }
-             return View();
+            return View();
         }
     }
 }

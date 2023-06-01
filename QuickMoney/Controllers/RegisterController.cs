@@ -46,7 +46,7 @@ namespace QuickMoney.Controllers
 					MimeMessage mimeMessage = new MimeMessage();
 					MailboxAddress mailboxAddressFrom = new MailboxAddress("Quick Money Admin", "quickmoneys100@gmail.com");
 					MailboxAddress mailboxAddressTo = new MailboxAddress("User", appUser.Email);
-  
+
 					mimeMessage.From.Add(mailboxAddressFrom);
 					mimeMessage.To.Add(mailboxAddressTo);
 

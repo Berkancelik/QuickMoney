@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DataAccsessLayer.Abstract
+﻿namespace DataAccsessLayer.Abstract
 {
     public interface IGenericDal<T> where T : class
     {
@@ -12,7 +6,7 @@ namespace DataAccsessLayer.Abstract
         void Delete(T t);
         void Update(T t);
         T GetById(int id);
-        List<T> GetList();   
+        List<T> GetList();
 
     }
 }

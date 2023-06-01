@@ -1,9 +1,4 @@
 ﻿using DataAccsessLayer.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
@@ -19,7 +14,7 @@ namespace BusinessLayer.Concrete
         public void Delete(ICustomerAccountProcessDal t)
         {
             _customerAccountProcessDal.Delete(t);
-         }
+        }
 
         public ICustomerAccountProcessDal GetById(int id)
         {
@@ -28,7 +23,7 @@ namespace BusinessLayer.Concrete
 
         public List<ICustomerAccountProcessDal> GetList()
         {
-           return _customerAccountProcessDal.GetList();
+            return _customerAccountProcessDal.GetList();
         }
 
         public void Insert(ICustomerAccountProcessDal t)
