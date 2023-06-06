@@ -1,6 +1,8 @@
-﻿namespace DataAccsessLayer.Abstract
+﻿using EntityLayer.Concrete;
+
+namespace DataAccsessLayer.Abstract
 {
-    public interface ICustomerAccountProcessDal : IGenericDal<ICustomerAccountProcessDal>
+    public interface ICustomerAccountProcessDal : IGenericDal<CustomerAccountProcess>
     {
     }
 }
