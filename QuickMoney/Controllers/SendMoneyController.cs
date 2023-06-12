@@ -36,7 +36,16 @@ namespace QuickMoney.Controllers
             sendMoneyForCustomerAccountProcessDto.ProcessType = "Havale";
             sendMoneyForCustomerAccountProcessDto.ReceiverID = receiverAccountNumberID;
 
- 
+            var values = new CustomerAccountProcess();
+            values.ProcessDate = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            values.SenderID = user.Id;
+            values.ProcessType = "Havale";
+            values.ReceiverID = receiverAccountNumberID;
+            values.Amount = sendMoneyForCustomerAccountProcessDto.Amount;
+
+            _customerAccountProcessService.TInsert(values);
+
+
             return RedirectToAction("Index", "Deneme");
         }
     }
