@@ -12,7 +12,7 @@ namespace DataAccsessLayer.Repositories
             context.SaveChanges();
         }
 
-   
+
         public T GetById(int id)
         {
             using var context = new Context();

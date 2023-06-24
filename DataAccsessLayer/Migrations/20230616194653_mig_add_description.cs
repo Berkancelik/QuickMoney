@@ -48,7 +48,7 @@ namespace DataAccsessLayer.Migrations
                 name: "Description",
                 table: "CustomerAccountProcesses",
                 type: "nvarchar(max)",
-                nullable: true ,
+                nullable: true,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<int>(

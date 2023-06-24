@@ -1,11 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccsessLayer.Abstract;
 using EntityLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
@@ -23,7 +18,7 @@ namespace BusinessLayer.Concrete
             _customerAccountProcessDal.Delete(t);
         }
 
-       
+
         public CustomerAccountProcess TGetById(int id)
         {
             return _customerAccountProcessDal.GetById(id);

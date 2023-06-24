@@ -3,7 +3,7 @@
     public class CustomerAccountProcess
     {
         public int Id { get; set; }
- 
+
         public int CustomerAccountProcessID { get; set; }
         public string ProcessType { get; set; }
         public decimal Amount { get; set; }
